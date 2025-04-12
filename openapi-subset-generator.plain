@@ -1,0 +1,33 @@
+{% include "python-console-app-template.plain", main_executable_file_name: "generate_openapi_subset.py" %}
+
+#  The OpenAPI Spec Subset Generator
+
+***Definitions:***
+
+- The API is a REST API.
+
+- The OpenAPI Spec is a file in json or yaml format that contains the full OpenAPI specification of The API.
+
+- The Subset contains the subset of The OpenAPI Spec. Inititally, The Subset contains complete The OpenAPI Spec.
+
+- The Subset should have the same ordering of keys as The OpenAPI Spec.
+
+
+***Test Requirements:***
+
+- The resource [asana-openapi-sample.yaml](asana-openapi-sample.yaml) contains example of The OpenAPI Spec that can be used for testing.
+
+
+***Functional Requirements:***
+
+- The App should take a file name of The OpenAPI Spec as the only positional argument.
+
+- If "--remove-descriptions" command line parameter is present, The App should remove from The Subset all descriptions which are only meant to be read by humans.
+
+- If "--remove-extensions" command line parameter is present, The App should remove from The Subset all OpenAPI Extensions, that is, custom properties that start with x-.
+  - An example of such extension is "x-readme", an OpenAPI extension from ReadMe.
+
+- The App should output The Subset to standard output in json format.
+
+- If "--yaml" command line parameter is present, The App should output The Subset to standard output in yaml format.
+  - By default keys should not be quoted in the output yaml.

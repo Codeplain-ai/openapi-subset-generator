@@ -1,0 +1,5 @@
+.DS_Store
+
+# Ignore intermediate build folders
+build.*/
+conformance_tests.backup/
