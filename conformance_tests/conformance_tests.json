@@ -1,0 +1,26 @@
+{
+    "1.1": {
+        "functional_requirement": "- Implement the entry point for The App.",
+        "folder_name": "conformance_tests/app_entry_point"
+    },
+    "2.1": {
+        "functional_requirement": "- The App should take a file name of The OpenAPI Spec as the only positional argument.",
+        "folder_name": "conformance_tests/openapi_processor"
+    },
+    "2.2": {
+        "functional_requirement": "- If \"--remove-descriptions\" command line parameter is present, The App should remove from The Subset all descriptions which are only meant to be read by humans.",
+        "folder_name": "conformance_tests/cli_parameters_handler"
+    },
+    "2.3": {
+        "functional_requirement": "- If \"--remove-extensions\" command line parameter is present, The App should remove from The Subset all OpenAPI Extensions, that is, custom properties that start with x-.\n  - An example of such extension is \"x-readme\", an OpenAPI extension from ReadMe.",
+        "folder_name": "conformance_tests/extensions_handler"
+    },
+    "2.4": {
+        "functional_requirement": "- The App should output The Subset to standard output in json format.",
+        "folder_name": "conformance_tests/output_formatter"
+    },
+    "2.5": {
+        "functional_requirement": "- If \"--yaml\" command line parameter is present, The App should output The Subset to standard output in yaml format.\n  - By default keys should not be quoted in the output yaml.",
+        "folder_name": "conformance_tests/yaml_formatter"
+    }
+}

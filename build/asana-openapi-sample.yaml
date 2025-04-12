@@ -1,0 +1,13 @@
+openapi: 3.0.0
+info:
+  description: >-
+    This is the interface for interacting with the Asana Platform.
+  title: Asana
+  version: '1.0'
+paths:
+  /users/me:
+    get:
+      summary: Get the current user
+      responses:
+        '200':
+          description: Successfully retrieved the user

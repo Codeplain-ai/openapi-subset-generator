@@ -1,0 +1,52 @@
+openapi: 3.0.0
+info:
+  description: >-
+    This is the interface for interacting with the [Asana
+    Platform](https://developers.asana.com). Our API reference
+    is generated from our [OpenAPI spec]
+    (https://raw.githubusercontent.com/Asana/openapi/master/defs/asana_oas.yaml).
+  x-public-description: >-
+    This is the interface for interacting with the [Asana
+    Platform](https://developers.asana.com). Our API reference
+    is generated from our [OpenAPI spec]
+    (https://raw.githubusercontent.com/Asana/openapi/master/defs/asana_oas.yaml).
+  title: Asana
+  termsOfService: https://asana.com/terms
+  contact:
+    name: Asana Support
+    url: https://asana.com/support
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+  version: '1.0'
+paths:
+  /users:
+    get:
+      summary: Get all users
+      description: Returns all users in the workspace
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                        name:
+                          type: string
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
